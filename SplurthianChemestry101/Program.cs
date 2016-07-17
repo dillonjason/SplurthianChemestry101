@@ -27,7 +27,7 @@ namespace SplurthianChemestry101
             Console.WriteLine(string.Format("{0}, {1} -> {2}", name, symbol, isSymbolValid));
             Console.WriteLine(string.Format("First alphabetical symbol: {0}", GetFirstAlphabeticalSymbol(name)));
             Console.WriteLine(string.Format("Number of distinct valid symbols: {0}", GetNumberOfDistinctSymbols(name)));
-            Console.WriteLine(string.Format("Number of distinct valid symbols for Blurth (Not Done): {0}", GetNumberOfDistinctSymbols(name)));
+            Console.WriteLine(string.Format("Number of distinct valid symbols for Blurth: {0}", GetNumberOfDistinctSymbolsBlurth(name)));
             Console.ReadLine();
 
             return 0;
@@ -72,7 +72,7 @@ namespace SplurthianChemestry101
         // Optional 3
         private static int GetNumberOfDistinctSymbolsBlurth(string name)
         {
-            return GetAllDistinctSymbols(name).Count();
+            return GetAllDistinctSymbolsBlurth(name).Count();
         }
 
         private static IEnumerable<string> GetAllDistinctSymbols(string name)
@@ -87,6 +87,20 @@ namespace SplurthianChemestry101
             }
 
             return symbols;
+        }
+
+        private static IEnumerable<string> GetAllDistinctSymbolsBlurth(string name)
+        {
+            if (name.Length == 1)
+                return new List<string>() { name };
+            else
+            {
+                var othersList = GetAllDistinctSymbolsBlurth(name.Substring(1));
+                var thisList = othersList
+                    .Union(othersList.Select(x => name[0] + x))
+                    .Union(new List<string>() { name[0].ToString() });
+                return thisList;
+            }
         }
     }
 }
