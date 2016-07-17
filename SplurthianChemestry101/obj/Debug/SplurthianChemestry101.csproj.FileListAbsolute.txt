@@ -1,0 +1,6 @@
+A:\Projects\SplurthianChemestry101\SplurthianChemestry101\bin\Debug\SplurthianChemestry101.exe.config
+A:\Projects\SplurthianChemestry101\SplurthianChemestry101\bin\Debug\SplurthianChemestry101.exe
+A:\Projects\SplurthianChemestry101\SplurthianChemestry101\bin\Debug\SplurthianChemestry101.pdb
+A:\Projects\SplurthianChemestry101\SplurthianChemestry101\obj\Debug\SplurthianChemestry101.csprojResolveAssemblyReference.cache
+A:\Projects\SplurthianChemestry101\SplurthianChemestry101\obj\Debug\SplurthianChemestry101.exe
+A:\Projects\SplurthianChemestry101\SplurthianChemestry101\obj\Debug\SplurthianChemestry101.pdb
